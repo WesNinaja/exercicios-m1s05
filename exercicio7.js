@@ -10,3 +10,36 @@
  *      remover os elementos do array compreendidos entre os índices inicial e final. Em seguida, retorna o
  *      array atualizado.
  */
+
+// Função para adicionar elemento ao final do array
+function adicionarElemento(array, elemento) {
+    array.push(elemento);
+    return array;
+  }
+  
+  // Função para remover o último elemento do array
+  function removerUltimoElemento(array) {
+    return array.pop();
+  }
+  
+  // Função para remover elementos entre um índice inicial e final do array
+  function removerElementosIntervalo(array, indiceInicial, indiceFinal) {
+    array.splice(indiceInicial, indiceFinal - indiceInicial + 1);
+    return array;
+  }
+  
+  // Exemplo de uso das funções
+  let myArray = [1, 2, 3, 4, 5];
+  
+  console.log("Array inicial:", myArray);
+  
+  myArray = adicionarElemento(myArray, 6);
+  console.log("Array após adicionar elemento:", myArray);
+  
+  let elementoRemovido = removerUltimoElemento(myArray);
+  console.log("Elemento removido:", elementoRemovido);
+  console.log("Array após remover último elemento:", myArray);
+  
+  myArray = removerElementosIntervalo(myArray, 1, 3);
+  console.log("Array após remover elementos do intervalo:", myArray);
+  
